@@ -22,13 +22,13 @@ GPIO.output(25, GPIO.LOW)
 
 
 def toggle_z_on():
-    GPIO.output(23, GPIO.HIGH)
+    GPIO.output(23, GPIO.LOW)
     # time.sleep(1)
     # GPIO.output(23, GPIO.LOW)
 
 
 def toggle_z_off():
-    GPIO.output(23,GPIO.LOW)
+    GPIO.output(23,GPIO.HIGH)
     # time.sleep(1)
     # GPIO.output(23, GPIO.LOW)
 
@@ -43,29 +43,29 @@ def toggle_z_off():
 #     GPIO.output(23, GPIO.LOW)
 
 def toggle_up_on():
-    GPIO.output(23, GPIO.HIGH)
-    GPI).output(25, GPIO.HIGH)
+    GPIO.output(23, GPIO.LOW)
+    GPIO.output(25, GPIO.LOW)
     # time.sleep(1)
     # GPIO.output(23, GPIO.LOW)
     # GPI).output(25, GPIO.LOW)
 
 def toggle_up__off():
-    GPIO.output(23, GPIO.LOW)
-    GPIO.output(25, GPIO.LOW)
+    GPIO.output(23, GPIO.HIGH)
+    GPIO.output(25, GPIO.HIGH)
     # time.sleep(1)
     # GPIO.output(23, GPIO.HIGH)
     # GPIO.output(25, GPIO.HIGH)
 
 def toggle_LeftRight():
-    GPIO.output(25,GPIO.HIGH)
-    GPIO.output(24,GPIO.HIGH)
+    GPIO.output(25,GPIO.LOW)
+    GPIO.output(24,GPIO.LOW)
     # time.sleep(1)
     # GPIO.output(25, GPIO.LOW)
     # GPIO.output(24,GPIOLOW)
 
 def toggle_LeftRight_off():
-    GPIO.output(24,GPIO.LOW)
-    GPIO.output(25,GPIO.LOW)
+    GPIO.output(24,GPIO.HIGH)
+    GPIO.output(25,GPIO.HIGH)
     # time.sleep(1)
     # GPIO.output(24, GPIO.HIGH)
     # GPIO.output(25,GPIO.HIGH)
@@ -87,7 +87,7 @@ button_z_back = tk.Button(win, text = 'Back/Forward ON', command = toggle_z_on)
 button_z_back.grid(row=2, rowspan=1, column=2, columnspan=1)
 
 button_z_forward = tk.Button(win, text = 'Back/Forward OFF', command = toggle_z_off)
-button_z_forward.grid(row=1, rowspan=1, column=2, column=1)
+button_z_forward.grid(row=1, rowspan=1, column=2, columnspan=1)
 
 # collection Plate Up/Down in X direction
 button_x_up = tk.Button(win, text = 'Up/Down ON', command = toggle_up_on)
